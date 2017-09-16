@@ -15,7 +15,7 @@ Kurs będzie na bieżąco zmieniany. Część ćwiczeń będą umieszczone w rep
 Nie będziemy zajmować się tematyką algorytmów (jest wiele ciekawych pozycji już na ten temat). Nie będziemy także skupiać się tak bardzo na metodykach wytwarzania oprogramowania (bo tym zajmuję się inżyneria oprogramowania).
 
 ### Struktura kursu
-Kurs podzieliłem na dwie zasadnicze części. Pierwsza bardzo ważna omawia programowanie proceduralne w języku C. Druga zaś będzie opisywać programowanie zorientowane abiektowo, czyli pewne podejście wykorzystywane w wielu systemach informatycznych.
+Kurs podzieliłem na dwie zasadnicze części. Pierwsza bardzo ważna omawia programowanie proceduralne w języku C. Druga zaś będzie opisywać programowanie zorientowane obiektowo, czyli pewne podejście wykorzystywane w wielu systemach informatycznych.
 
 W pierwszej części nie zabraknie podstawowych aspektów programowania (podstawowe typy i struktury danych). Pokaże w niej także w jaki sposób sterować działaniem programu (z ang. control flow). Do tego wszystkiego nauczymy się korzystać z dobrodziejstw debuggera.
 
