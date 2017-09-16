@@ -1,0 +1,485 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Podstawy programowania w języku C/C++">
+      
+      
+      
+        <meta name="author" content="Adrian Kastrau">
+      
+      
+        <link rel="shortcut icon" href="./assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+    
+    
+      
+        <title>Korepetycje - C++</title>
+      
+    
+    
+      <script src="./assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="./assets/stylesheets/application-a20f419c8e.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="352" height="448" viewBox="0 0 352 448" id="bitbucket"><path fill="currentColor" d="M203.75 214.75q2 15.75-12.625 25.25t-27.875 1.5q-9.75-4.25-13.375-14.5t-.125-20.5 13-14.5q9-4.5 18.125-3t16 8.875 6.875 16.875zm27.75-5.25q-3.5-26.75-28.25-41T154 165.25q-15.75 7-25.125 22.125t-8.625 32.375q1 22.75 19.375 38.75t41.375 14q22.75-2 38-21t12.5-42zM291.25 74q-5-6.75-14-11.125t-14.5-5.5T245 54.25q-72.75-11.75-141.5.5-10.75 1.75-16.5 3t-13.75 5.5T60.75 74q7.5 7 19 11.375t18.375 5.5T120 93.75Q177 101 232 94q15.75-2 22.375-3t18.125-5.375T291.25 74zm14.25 258.75q-2 6.5-3.875 19.125t-3.5 21-7.125 17.5-14.5 14.125q-21.5 12-47.375 17.875t-50.5 5.5-50.375-4.625q-11.5-2-20.375-4.5T88.75 412 70.5 401.125t-13-15.375q-6.25-24-14.25-73l1.5-4 4.5-2.25q55.75 37 126.625 37t126.875-37q5.25 1.5 6 5.75t-1.25 11.25-2 9.25zM350.75 92.5q-6.5 41.75-27.75 163.75-1.25 7.5-6.75 14t-10.875 10T291.75 288q-63 31.5-152.5 22-62-6.75-98.5-34.75-3.75-3-6.375-6.625t-4.25-8.75-2.25-8.5-1.5-9.875T25 232.75q-2.25-12.5-6.625-37.5t-7-40.375T5.5 118 0 78.5Q.75 72 4.375 66.375T12.25 57t11.25-7.5T35 43.875t12-4.625q31.25-11.5 78.25-16 94.75-9.25 169 12.5Q333 47.25 348 66.25q4 5 4.125 12.75t-1.375 13.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="." title="Korepetycje - C++" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon md-icon--home"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+            
+            Strona główna
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://bitbucket.org/akastrau/korepetycje-c" title="Go to repository" class="md-source" data-md-source="bitbucket">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#bitbucket" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Bitbucket
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        <i class="md-icon md-icon--home"></i>
+      
+    </div>
+    Korepetycje - C++
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://bitbucket.org/akastrau/korepetycje-c" title="Go to repository" class="md-source" data-md-source="bitbucket">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#bitbucket" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Bitbucket
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Strona główna
+      </label>
+    
+    <a href="." title="Strona główna" class="md-nav__link md-nav__link--active">
+      Strona główna
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sowo-na-niedziele-czyli-krotki-wstep" title="Słowo na niedzielę... czyli krótki wstęp" class="md-nav__link">
+    Słowo na niedzielę... czyli krótki wstęp
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-czym-bedzie-ten-kurs" title="O czym będzie ten kurs" class="md-nav__link">
+    O czym będzie ten kurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-czym-nie-bedzie-ten-kurs" title="O czym nie będzie ten kurs" class="md-nav__link">
+    O czym nie będzie ten kurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struktura-kursu" title="Struktura kursu" class="md-nav__link">
+    Struktura kursu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlaczego-jezyk-c" title="Dlaczego język C?" class="md-nav__link">
+    Dlaczego język C?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zroda-wiedzy-polecane-przeze-mnie" title="Źródła wiedzy (polecane przeze mnie)" class="md-nav__link">
+    Źródła wiedzy (polecane przeze mnie)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-jakiego-ide-polecam-korzystac" title="Z jakiego IDE polecam korzystać" class="md-nav__link">
+    Z jakiego IDE polecam korzystać
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-kontroli-wersji" title="System kontroli wersji" class="md-nav__link">
+    System kontroli wersji
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sowo-na-niedziele-czyli-krotki-wstep" title="Słowo na niedzielę... czyli krótki wstęp" class="md-nav__link">
+    Słowo na niedzielę... czyli krótki wstęp
+  </a>
+  
+    <nav class="md-nav">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#o-czym-bedzie-ten-kurs" title="O czym będzie ten kurs" class="md-nav__link">
+    O czym będzie ten kurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#o-czym-nie-bedzie-ten-kurs" title="O czym nie będzie ten kurs" class="md-nav__link">
+    O czym nie będzie ten kurs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#struktura-kursu" title="Struktura kursu" class="md-nav__link">
+    Struktura kursu
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dlaczego-jezyk-c" title="Dlaczego język C?" class="md-nav__link">
+    Dlaczego język C?
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zroda-wiedzy-polecane-przeze-mnie" title="Źródła wiedzy (polecane przeze mnie)" class="md-nav__link">
+    Źródła wiedzy (polecane przeze mnie)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#z-jakiego-ide-polecam-korzystac" title="Z jakiego IDE polecam korzystać" class="md-nav__link">
+    Z jakiego IDE polecam korzystać
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#system-kontroli-wersji" title="System kontroli wersji" class="md-nav__link">
+    System kontroli wersji
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://bitbucket.org/akastrau/korepetycje-c/src/default/docs/index.md" title="Edit this page" class="md-icon md-content__icon">&#xE3C9;</a>
+                
+                
+                <h1 id="witaj-w-kursie-podstaw-programowania-w-jezyku-c">Witaj w kursie podstaw programowania w języku C++!<a class="headerlink" href="#witaj-w-kursie-podstaw-programowania-w-jezyku-c" title="Permanent link">&para;</a></h1>
+<p>Kody źródłowe znajdują się w <a href="https://bitbucket.org/akastrau/korepetycje-c">repozytorium Bitbucket</a>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Wskazówka</p>
+<p>Odnośnik do repozytorium znajduje się także w prawym górnym rogu menu.</p>
+</div>
+<h2 id="sowo-na-niedziele-czyli-krotki-wstep">Słowo na niedzielę... czyli krótki wstęp<a class="headerlink" href="#sowo-na-niedziele-czyli-krotki-wstep" title="Permanent link">&para;</a></h2>
+<h3 id="o-czym-bedzie-ten-kurs">O czym będzie ten kurs<a class="headerlink" href="#o-czym-bedzie-ten-kurs" title="Permanent link">&para;</a></h3>
+<p>Materiały umieszczone na tej stronie są elementami pomocniczymi do nauki języka C++. Wszystkie inne aspekty omówione będą na zajęciach. Nie będę za bardzo wnikał w teorie (jednak niektóre elementy krótko opisze).</p>
+<p>Kurs będzie na bieżąco zmieniany. Część ćwiczeń będą umieszczone w repozytorium. Materiały o których wspomniałem mają postać mini ściągawki (warto zapoznać się z nimi przed zajęciami).</p>
+<h3 id="o-czym-nie-bedzie-ten-kurs">O czym nie będzie ten kurs<a class="headerlink" href="#o-czym-nie-bedzie-ten-kurs" title="Permanent link">&para;</a></h3>
+<p>Nie będziemy zajmować się tematyką algorytmów (jest wiele ciekawych pozycji już na ten temat). Nie będziemy także skupiać się tak bardzo na metodykach wytwarzania oprogramowania (bo tym zajmuję się inżyneria oprogramowania).</p>
+<h3 id="struktura-kursu">Struktura kursu<a class="headerlink" href="#struktura-kursu" title="Permanent link">&para;</a></h3>
+<p>Kurs podzieliłem na dwie zasadnicze części. Pierwsza bardzo ważna omawia programowanie proceduralne w języku C. Druga zaś będzie opisywać programowanie zorientowane abiektowo, czyli pewne podejście wykorzystywane w wielu systemach informatycznych.</p>
+<p>W pierwszej części nie zabraknie podstawowych aspektów programowania (podstawowe typy i struktury danych). Pokaże w niej także w jaki sposób sterować działaniem programu (z ang. control flow). Do tego wszystkiego nauczymy się korzystać z dobrodziejstw debuggera.</p>
+<p>Następnie wejdziemy w świat programowania zorietowanego obiektowo. Poznamy różnice między programowaniem proceduralnym i obiektowym. Nauczymy się modelować programy w podejściu obiektowym.</p>
+<h3 id="dlaczego-jezyk-c">Dlaczego język C?<a class="headerlink" href="#dlaczego-jezyk-c" title="Permanent link">&para;</a></h3>
+<p>Zaczynamy od tego języka z kilku powodów:</p>
+<ul>
+<li>Jest prostszy w swojej strukturze (brak złożonych obiektów), </li>
+<li>Biblioteka standardowa jest mała (jeśli chodzi o ilość funkcji w porównaniu do języka C++),</li>
+<li>Nauczymy się operować na wskaźnikach (pozwoli nam to zrozumieć pewne mechanizmy istniejące w jezykach bazujących na języku C),</li>
+<li>Daje nam dostęp bezpośrednio do pamięci RAM (niżej jest tylko język Asembler).</li>
+</ul>
+<p><center><img src="img/c-is-simple.jpg" alt="C is simple"></center>
+<center>Źródło: https://comm2302metafiction.wordpress.com/2012/10/03/the-equal-dilemma/</center></p>
+<p>To wszystko pozwoli nam na płynne przejście do C++.</p>
+<h3 id="zroda-wiedzy-polecane-przeze-mnie">Źródła wiedzy (polecane przeze mnie)<a class="headerlink" href="#zroda-wiedzy-polecane-przeze-mnie" title="Permanent link">&para;</a></h3>
+<p>Czytanie dokumentacji to bardzo ważna umiejętność! Dlatego polecam używać dokumentacji z przykładami.
+Na co dzień korzystam z dokumentacji z portalu <a href="http://www.cplusplus.com/reference/">cplusplus.com</a>. Można tam znaleźć tutorale dotyczące języka C i C++. Drugą stroną, który kazdy programista powinien znać to <a href="./stackoverflow.com">Stack Overflow</a>.</p>
+<p><center><image src="img/stackoverflow.jpg" alt="Stack Overflow" width="50%" height="50%"></center>
+<center>Źródło: imgur.com</center></p>
+<h3 id="z-jakiego-ide-polecam-korzystac">Z jakiego IDE polecam korzystać<a class="headerlink" href="#z-jakiego-ide-polecam-korzystac" title="Permanent link">&para;</a></h3>
+<p>IDE to środowisko programistyczne którego w skład wchodzą:</p>
+<ul>
+<li>kompilator</li>
+<li>linker</li>
+<li>debugger</li>
+<li>i najczęściej inne narzędzia pomagające w pisaniu kodu.</li>
+</ul>
+<p>Na zajęciach bedziemy korzystać z Visual Studio 2017 (wersja community - do pobrania za darmo).
+<center><img src="img/vs.jpg" alt="Visual Studio"></center>
+<center>Źródło: http://i.memecaptain.com/gend_images/loHMIw.jpg</center></p>
+<h3 id="system-kontroli-wersji">System kontroli wersji<a class="headerlink" href="#system-kontroli-wersji" title="Permanent link">&para;</a></h3>
+<p>Na zajęciach będziemy korzystać z systemów kontroli wersji opartych o technologie Git. Wszystkie instrukcje co do konfiguracji środowiska będą/zostały omówione na zajęciach.</p>
+<h1 id="algorytmy-struktury-danych-programy">Algorytmy + struktury danych = programy<a class="headerlink" href="#algorytmy-struktury-danych-programy" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Książka napisana przez Niklausa Wirtha świetnie ukazująca istote algorytmów i struktur danych.</p>
+</blockquote>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Adrian Kastrau 2017
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="./assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:"."}})</script>
+      
+    
+    
+      
+    
+  </body>
+</html>
