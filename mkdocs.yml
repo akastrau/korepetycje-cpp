@@ -1,0 +1,14 @@
+site_name: Korepetycje - C++
+theme: 'material'
+repo_url: 'https://bitbucket.org/akastrau/korepetycje-c'
+site_description: 'Podstawy programowania w języku C/C++'
+site_author: 'Adrian Kastrau'
+copyright: 'Adrian Kastrau 2017'
+
+markdown_extensions:
+  - admonition
+  - toc(permalink=true)
+  - codehilite(linenums=true)
+
+pages:
+- Strona główna: 'index.md'
