@@ -4,7 +4,7 @@
 
 W Visual Studio tworzymy nowy projekt C++. Wybieramy **Empty Project**. Po utworzeniu nowego projektu musimy utworzyć nowy plik (niech to będzie plik **Source.c**). Rozszerzenie **.c** mówi nam o tym, że nasz kod źródłowy będzie pisany w języku C.
 
-<center><img src="/img/hackerman-c.jpg" alt="Hackerman" width="60%" height="60%"></center>
+<center><img src="../img/hackerman-c.jpg" alt="Hackerman" width="60%" height="60%"></center>
 <center>Źródło: http://devhumor.com/media/i-can-write-quot-hello-world-quot-in-c</center>
 
 ## No to jazda, jazda, jazda, trójkąt, gwiazda!

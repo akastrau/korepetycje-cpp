@@ -3,10 +3,26 @@
 
     
     <url>
-     <loc>/</loc>
-     <lastmod>2017-09-16</lastmod>
+     <loc>https://akastrau.github.io/korepetycje-cpp//</loc>
+     <lastmod>2017-09-18</lastmod>
      <changefreq>daily</changefreq>
     </url>
+    
+
+    
+        
+    <url>
+     <loc>https://akastrau.github.io/korepetycje-cpp//c/</loc>
+     <lastmod>2017-09-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://akastrau.github.io/korepetycje-cpp//lesson01-p1/</loc>
+     <lastmod>2017-09-18</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
     
 
 </urlset>
