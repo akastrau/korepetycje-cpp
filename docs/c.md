@@ -4,3 +4,5 @@ W tej części skupimy się na podstawowych elementach tego języka. Poznamy w j
 
 <center><img src="../img/pointers.jpg" alt="Pointers in C/C++"></center>
 <center>Źródło: http://www.quickmeme.com/meme/3ovgn9</center>
+
+**Ostatnia aktualizacja:** Mon Sep 18 18:36:36 CEST 2017
