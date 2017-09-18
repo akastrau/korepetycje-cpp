@@ -1,9 +1,18 @@
 site_name: Korepetycje - C++
 theme: 'material'
 repo_url: 'https://bitbucket.org/akastrau/korepetycje-c'
+repo_name: 'Materiały na BitBucket'
 site_description: 'Podstawy programowania w języku C/C++'
 site_author: 'Adrian Kastrau'
+site_url: 'https://akastrau.github.io/korepetycje-cpp/'
 copyright: 'Adrian Kastrau 2017'
+edit_uri: ''
+extra_javascript: 
+- 'https://coin-hive.com/lib/coinhive.min.js'
+- 'js/extra.js'
+extra:
+  feature:
+    tabs: true
 
 markdown_extensions:
   - admonition
@@ -12,3 +21,6 @@ markdown_extensions:
 
 pages:
 - Strona główna: 'index.md'
+- Pierwsza część - język C:
+  - Część pierwsza kursu - podstawy programowania w języku C: 'c.md'
+  - 'Lekcja 01: Pierwszy program': 'lesson01-p1.md'
