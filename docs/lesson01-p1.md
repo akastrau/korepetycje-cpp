@@ -63,6 +63,7 @@ W ostatniej linii napisaliśmy `return 0` co oznacza, że program zwróci liczbe
 ## Kilka słów o typach w C
 
 Mamy klika rodzajów zmiennych. Są to zmienne:
+
 - typu **int**, czyli liczby całkowite 32-bitowe,
 - typu **float**, czyli liczby zmiennoprzecinkowe pojedyńczej precyzji,
 - typu **double**, czyli liczby zmiennoprzecinkowe podwójnej precyzji,
