@@ -77,6 +77,7 @@ Oczywiście mamy jeszcze wariant ze słowem **long**, ale na tym etapie nie będ
 ## Funkcja printf()
 
 Przy wywołaniu funkcji `printf()` skorzystaliśmy z `%i`. Jest to tzw. *format specifier*. Na podstawie dokumentacji z [cplusplus.com](cplusplus.com/reference/) wymienimy kilka dostępnych formatów wyświetlanych danych. Między innymi są to:
+
 - `%i` lub `%d` dla liczb typu całkowitego,
 - `%f` dla liczby zmiennoprzecinkowych,
 - `%c` dla pojedynczego znaku,
@@ -87,6 +88,7 @@ W funkcji `printf()` można użyć specjalnych znaków za pomocą `\` (przykład
 ## Na zakończenie - return ITS_THE_END
 
 Słówko kluczowe `return` w funkcji `main()` wykorzystujemy po to, aby zasygnalizować stan wykonania naszego programu. Zwykle zwraca się:
+
 - `0`, gdy program zakończył sie poprawnie,
 - `1` lub liczbe ujemną gdy program zakończył się porażką.
 
