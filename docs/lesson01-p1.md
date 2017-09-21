@@ -24,7 +24,7 @@ int main()
 }
 ```
 
-Co tutaj się stało? W pierwszej linijce napisalismy `#include <stdio.h>`. Oznacza to, że kompilator dołączy za nas biblioteke **stdio.h**. W drugiej zaś biblioteke **stdlib.h**.
+Co tutaj się stało? W pierwszej linijce napisaliśmy `#include <stdio.h>`. Oznacza to, że kompilator dołączy za nas biblioteke **stdio.h**. W drugiej zaś bibliotekę **stdlib.h**.
 
 Dlaczego te biblioteki dołączyliśmy? Pierwsza z nich to *STanDard Input Output library*. Znajdziemy w niej podstawowe funkcje wejścia/wyjścia (takie jak wypisywanie tekstu na ekran). Z kolei **stdlib.h** to *STanDard LIBrary*. Znajdziemy w niej postawowe stałe i makra takie jak `EXIT_SUCCESS`.
 
@@ -35,7 +35,7 @@ Dlaczego te biblioteki dołączyliśmy? Pierwsza z nich to *STanDard Input Outpu
 
 ## Funkcja main - punkt startowy naszej aplikacji
 
-Aby nasz program mógł się uruchomić, kompilator musi wiedzieć w jakim miejscu zaczyna wykonywać się nasza aplikacja. Takim miejscem jest funcja **main**. O funkcjach opowiemy sobie w innej lekcji. Na tym etapie zwróć uwage na definicje naszej funkcji startowej:
+Aby nasz program mógł się uruchomić, kompilator musi wiedzieć w jakim miejscu zaczyna wykonywać się nasza aplikacja. Takim miejscem jest funkcja **main**. O funkcjach opowiemy sobie w innej lekcji. Na tym etapie zwróć uwage na definicje naszej funkcji startowej:
 
 ``` c
 int main()
@@ -58,16 +58,16 @@ W kolejnej linijce użyliśmy funkcji wbudowanej ``printf()`` (printf to skrót 
 
 W linii numer 8 użyliśmy funkcji `system()`. Funkcja ta wywołuje polecenie systemowe (w naszym przypadku jest to polecenie `pause`, które zatrzymuje działanie naszego programu i oczekuje na wciśnięcie dowolnego klawisza). Niestety polecenie `pause` działa tylko w systemach Windows. W przypadku innych systemów musimy użyć innego rozwiązania, żeby zatrzymać działanie programu.
 
-W ostatniej linii napisaliśmy `return 0` co oznacza, że program zwróci liczbe 0 po zakończeniu działania.
+W ostatniej linii napisaliśmy `return 0` co oznacza, że program zwróci liczbę 0 po zakończeniu działania.
 
 ## Kilka słów o typach w C
 
 Mamy klika rodzajów zmiennych. Są to zmienne:
 
 - typu **int**, czyli liczby całkowite 32-bitowe,
-- typu **float**, czyli liczby zmiennoprzecinkowe pojedyńczej precyzji,
+- typu **float**, czyli liczby zmiennoprzecinkowe pojedynczej precyzji,
 - typu **double**, czyli liczby zmiennoprzecinkowe podwójnej precyzji,
-- typu **char**, czyli znak/litera lub **char*** w przypadku łancuchu znaków, czyli tekstu.
+- typu **char**, czyli znak/litera lub **char*** w przypadku łańcuchu znaków, czyli tekstu.
 
 Oczywiście mamy jeszcze wariant ze słowem **long**, ale na tym etapie nie będę o nim wspominać.
 
@@ -76,7 +76,7 @@ Oczywiście mamy jeszcze wariant ze słowem **long**, ale na tym etapie nie będ
 
 ## Funkcja printf()
 
-Przy wywołaniu funkcji `printf()` skorzystaliśmy z `%i`. Jest to tzw. *format specifier*. Na podstawie dokumentacji z [cplusplus.com](cplusplus.com/reference/) wymienimy kilka dostępnych formatów wyświetlanych danych. Między innymi są to:
+Przy wywołaniu funkcji `printf()` skorzystaliśmy z `%i`. Jest to tzw. *format specifier*. Na podstawie dokumentacji z [cplusplus.com](http://www.cplusplus.com/reference/) wymienimy kilka dostępnych formatów wyświetlanych danych. Między innymi są to:
 
 - `%i` lub `%d` dla liczb typu całkowitego,
 - `%f` dla liczby zmiennoprzecinkowych,
@@ -90,7 +90,7 @@ W funkcji `printf()` można użyć specjalnych znaków za pomocą `\` (przykład
 Słówko kluczowe `return` w funkcji `main()` wykorzystujemy po to, aby zasygnalizować stan wykonania naszego programu. Zwykle zwraca się:
 
 - `0`, gdy program zakończył sie poprawnie,
-- `1` lub liczbe ujemną gdy program zakończył się porażką.
+- `1` lub liczbę ujemną gdy program zakończył się porażką.
 
 ## Praktyka czyni mistrza... czyli zadania do zrobienia
 
@@ -101,10 +101,9 @@ Kod do zadania wygląda następująco:
 
 int main(void)
 {
-    const float pi = 3.14159265;
+    const double pi = 3.14159265;
     char text[] = "Some text here";
     int number = 1246754;
-    double numerical_value = 2674.3236434664311;
 
     // Uzupelnij kod
 
@@ -115,9 +114,7 @@ int main(void)
 
 Zadania:
 
-1. Wyświetl liczbe pi z dokładnością do trzeciego miejsca po przecinku,
-2. Wyświetl znak 1, 3 i 8 z łancucha **text**,
-3. Wyświetli liczbe **number** zaokrąglając ją do piątego miejsca,
-4. Wyświetl liczbę **numerical_value** w następujący sposób:
-    - część całkowitą zaokrąglij do drugiego miejsca,
-    - część ułamkową zaokrąglij do ósmego miejsca po przecinku.
+1. Wyświetl liczbę pi z dokładnością do trzeciego miejsca po przecinku,
+2. Wyświetl znak 1, 3 i 8 z łańcucha **text**,
+3. Wyświetl liczbę **number**,
+4. Wyświetl łańcuch znaków **text**.

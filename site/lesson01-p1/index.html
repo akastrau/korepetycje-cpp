@@ -493,7 +493,7 @@
 </pre></div>
 </td></tr></table>
 
-<p>Co tutaj się stało? W pierwszej linijce napisalismy <code>#include &lt;stdio.h&gt;</code>. Oznacza to, że kompilator dołączy za nas biblioteke <strong>stdio.h</strong>. W drugiej zaś biblioteke <strong>stdlib.h</strong>.</p>
+<p>Co tutaj się stało? W pierwszej linijce napisaliśmy <code>#include &lt;stdio.h&gt;</code>. Oznacza to, że kompilator dołączy za nas biblioteke <strong>stdio.h</strong>. W drugiej zaś bibliotekę <strong>stdlib.h</strong>.</p>
 <p>Dlaczego te biblioteki dołączyliśmy? Pierwsza z nich to <em>STanDard Input Output library</em>. Znajdziemy w niej podstawowe funkcje wejścia/wyjścia (takie jak wypisywanie tekstu na ekran). Z kolei <strong>stdlib.h</strong> to <em>STanDard LIBrary</em>. Znajdziemy w niej postawowe stałe i makra takie jak <code>EXIT_SUCCESS</code>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Ciekawostka</p>
@@ -502,7 +502,7 @@ W bibliotece standardowej stała <code>EXIT_SUCCESS</code> przyjmuje wartość <
 Istnieje także makro <code>EXIT_FAILURE</code>, które definiuje wartość <code>1</code>.</p>
 </div>
 <h2 id="funkcja-main-punkt-startowy-naszej-aplikacji">Funkcja main - punkt startowy naszej aplikacji<a class="headerlink" href="#funkcja-main-punkt-startowy-naszej-aplikacji" title="Permanent link">&para;</a></h2>
-<p>Aby nasz program mógł się uruchomić, kompilator musi wiedzieć w jakim miejscu zaczyna wykonywać się nasza aplikacja. Takim miejscem jest funcja <strong>main</strong>. O funkcjach opowiemy sobie w innej lekcji. Na tym etapie zwróć uwage na definicje naszej funkcji startowej:</p>
+<p>Aby nasz program mógł się uruchomić, kompilator musi wiedzieć w jakim miejscu zaczyna wykonywać się nasza aplikacja. Takim miejscem jest funkcja <strong>main</strong>. O funkcjach opowiemy sobie w innej lekcji. Na tym etapie zwróć uwage na definicje naszej funkcji startowej:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
 2
 3
@@ -522,14 +522,14 @@ Istnieje także makro <code>EXIT_FAILURE</code>, które definiuje wartość <cod
 <p>W kolejnej linijce użyliśmy funkcji wbudowanej <code>printf()</code> (printf to skrót od <em>print formatted</em>). Wyświetla ona sformatowany tekst. Spójrzmy na pierwszy argument, który wchodzi do naszej funkcji:
 <code>"Hello! Your number is %i!\n"</code>. Jest to tekst, który zostanie wyświetlony na ekranie. <code>%i</code> oznacza, że kompilator podstawi tu zmienną typu <strong>int</strong>. <code>\n</code> na końcu naszego tekstu oznacza znak nowej linii (z ang. <em>newline</em>). Jako drugi argument w funkcji <code>printf()</code> podaliśmy zmienną <strong>variable</strong>. Dzięki temu funkcja <code>printf()</code> podstawi wartość zmiennej pod <code>%i</code>.</p>
 <p>W linii numer 8 użyliśmy funkcji <code>system()</code>. Funkcja ta wywołuje polecenie systemowe (w naszym przypadku jest to polecenie <code>pause</code>, które zatrzymuje działanie naszego programu i oczekuje na wciśnięcie dowolnego klawisza). Niestety polecenie <code>pause</code> działa tylko w systemach Windows. W przypadku innych systemów musimy użyć innego rozwiązania, żeby zatrzymać działanie programu.</p>
-<p>W ostatniej linii napisaliśmy <code>return 0</code> co oznacza, że program zwróci liczbe 0 po zakończeniu działania.</p>
+<p>W ostatniej linii napisaliśmy <code>return 0</code> co oznacza, że program zwróci liczbę 0 po zakończeniu działania.</p>
 <h2 id="kilka-sow-o-typach-w-c">Kilka słów o typach w C<a class="headerlink" href="#kilka-sow-o-typach-w-c" title="Permanent link">&para;</a></h2>
 <p>Mamy klika rodzajów zmiennych. Są to zmienne:</p>
 <ul>
 <li>typu <strong>int</strong>, czyli liczby całkowite 32-bitowe,</li>
-<li>typu <strong>float</strong>, czyli liczby zmiennoprzecinkowe pojedyńczej precyzji,</li>
+<li>typu <strong>float</strong>, czyli liczby zmiennoprzecinkowe pojedynczej precyzji,</li>
 <li>typu <strong>double</strong>, czyli liczby zmiennoprzecinkowe podwójnej precyzji,</li>
-<li>typu <strong>char</strong>, czyli znak/litera lub <strong>char</strong>* w przypadku łancuchu znaków, czyli tekstu.</li>
+<li>typu <strong>char</strong>, czyli znak/litera lub <strong>char</strong>* w przypadku łańcuchu znaków, czyli tekstu.</li>
 </ul>
 <p>Oczywiście mamy jeszcze wariant ze słowem <strong>long</strong>, ale na tym etapie nie będę o nim wspominać.</p>
 <div class="admonition note">
@@ -537,16 +537,20 @@ Istnieje także makro <code>EXIT_FAILURE</code>, które definiuje wartość <cod
 <p>Więcej informacji na temat typów podstawowych znajdziesz na przykład <a href="https://msdn.microsoft.com/en-us/library/cc953fe1.aspx">tu</a>.</p>
 </div>
 <h2 id="funkcja-printf">Funkcja printf()<a class="headerlink" href="#funkcja-printf" title="Permanent link">&para;</a></h2>
-<p>Przy wywołaniu funkcji <code>printf()</code> skorzystaliśmy z <code>%i</code>. Jest to tzw. <em>format specifier</em>. Na podstawie dokumentacji z <a href="../cplusplus.com/reference/">cplusplus.com</a> wymienimy kilka dostępnych formatów wyświetlanych danych. Między innymi są to:
-- <code>%i</code> lub <code>%d</code> dla liczb typu całkowitego,
-- <code>%f</code> dla liczby zmiennoprzecinkowych,
-- <code>%c</code> dla pojedynczego znaku,
-- <code>%s</code> dla łańcucha znaku.</p>
+<p>Przy wywołaniu funkcji <code>printf()</code> skorzystaliśmy z <code>%i</code>. Jest to tzw. <em>format specifier</em>. Na podstawie dokumentacji z <a href="http://www.cplusplus.com/reference/">cplusplus.com</a> wymienimy kilka dostępnych formatów wyświetlanych danych. Między innymi są to:</p>
+<ul>
+<li><code>%i</code> lub <code>%d</code> dla liczb typu całkowitego,</li>
+<li><code>%f</code> dla liczby zmiennoprzecinkowych,</li>
+<li><code>%c</code> dla pojedynczego znaku,</li>
+<li><code>%s</code> dla łańcucha znaku.</li>
+</ul>
 <p>W funkcji <code>printf()</code> można użyć specjalnych znaków za pomocą <code>\</code> (przykład <code>\n</code>). Zachęcam do poczytania dokumentacji tej funkcji.</p>
 <h2 id="na-zakonczenie-return-its_the_end">Na zakończenie - return ITS_THE_END<a class="headerlink" href="#na-zakonczenie-return-its_the_end" title="Permanent link">&para;</a></h2>
-<p>Słówko kluczowe <code>return</code> w funkcji <code>main()</code> wykorzystujemy po to, aby zasygnalizować stan wykonania naszego programu. Zwykle zwraca się:
-- <code>0</code>, gdy program zakończył sie poprawnie,
-- <code>1</code> lub liczbe ujemną gdy program zakończył się porażką.</p>
+<p>Słówko kluczowe <code>return</code> w funkcji <code>main()</code> wykorzystujemy po to, aby zasygnalizować stan wykonania naszego programu. Zwykle zwraca się:</p>
+<ul>
+<li><code>0</code>, gdy program zakończył sie poprawnie,</li>
+<li><code>1</code> lub liczbę ujemną gdy program zakończył się porażką.</li>
+</ul>
 <h2 id="praktyka-czyni-mistrza-czyli-zadania-do-zrobienia">Praktyka czyni mistrza... czyli zadania do zrobienia<a class="headerlink" href="#praktyka-czyni-mistrza-czyli-zadania-do-zrobienia" title="Permanent link">&para;</a></h2>
 <p>Kod do zadania wygląda następująco:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
@@ -562,16 +566,14 @@ Istnieje także makro <code>EXIT_FAILURE</code>, które definiuje wartość <cod
 11
 12
 13
-14
-15</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+14</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
 <span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
 
 <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
 <span class="p">{</span>
-    <span class="k">const</span> <span class="kt">float</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265</span><span class="p">;</span>
+    <span class="k">const</span> <span class="kt">double</span> <span class="n">pi</span> <span class="o">=</span> <span class="mf">3.14159265</span><span class="p">;</span>
     <span class="kt">char</span> <span class="n">text</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;Some text here&quot;</span><span class="p">;</span>
     <span class="kt">int</span> <span class="n">number</span> <span class="o">=</span> <span class="mi">1246754</span><span class="p">;</span>
-    <span class="kt">double</span> <span class="n">numerical_value</span> <span class="o">=</span> <span class="mf">2674.3236434664311</span><span class="p">;</span>
 
     <span class="c1">// Uzupelnij kod</span>
 
@@ -583,14 +585,10 @@ Istnieje także makro <code>EXIT_FAILURE</code>, które definiuje wartość <cod
 
 <p>Zadania:</p>
 <ol>
-<li>Wyświetl liczbe pi z dokładnością do trzeciego miejsca po przecinku,</li>
-<li>Wyświetl znak 1, 3 i 8 z łancucha <strong>text</strong>,</li>
-<li>Wyświetli liczbe <strong>number</strong> zaokrąglając ją do piątego miejsca,</li>
-<li>Wyświetl liczbę <strong>numerical_value</strong> w następujący sposób:<ul>
-<li>część całkowitą zaokrąglij do drugiego miejsca,</li>
-<li>część ułamkową zaokrąglij do ósmego miejsca po przecinku.</li>
-</ul>
-</li>
+<li>Wyświetl liczbę pi z dokładnością do trzeciego miejsca po przecinku,</li>
+<li>Wyświetl znak 1, 3 i 8 z łańcucha <strong>text</strong>,</li>
+<li>Wyświetl liczbę <strong>number</strong>,</li>
+<li>Wyświetl łańcuch znaków <strong>text</strong>.</li>
 </ol>
                 
                   

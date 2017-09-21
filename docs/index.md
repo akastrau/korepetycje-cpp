@@ -36,7 +36,7 @@ To wszystko pozwoli nam na płynne przejście do C++.
 
 ### Źródła wiedzy (polecane przeze mnie)
 Czytanie dokumentacji to bardzo ważna umiejętność! Dlatego polecam używać dokumentacji z przykładami.
-Na co dzień korzystam z dokumentacji z portalu [cplusplus.com](http://www.cplusplus.com/reference/). Można tam znaleźć tutorale dotyczące języka C i C++. Drugą stroną, który kazdy programista powinien znać to [Stack Overflow](stackoverflow.com).
+Na co dzień korzystam z dokumentacji z portalu [cplusplus.com](http://www.cplusplus.com/reference/). Można tam znaleźć tutorale dotyczące języka C i C++. Drugą stroną, który kazdy programista powinien znać to [Stack Overflow](https://stackoverflow.com).
 
 <center><image src="img/stackoverflow.jpg" alt="Stack Overflow" width="50%" height="50%"></center>
 <center>Źródło: imgur.com</center>
