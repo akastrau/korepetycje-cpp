@@ -24,3 +24,4 @@ pages:
 - Pierwsza część - język C:
   - Część pierwsza kursu - podstawy programowania w języku C: 'c.md'
   - 'Lekcja 01: Pierwszy program': 'lesson01-p1.md'
+  - 'Lekcja 02: control flow, operacje wejścia': 'lesson02-p1.md'

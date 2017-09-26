@@ -4,7 +4,7 @@
     
     <url>
      <loc>https://akastrau.github.io/korepetycje-cpp//</loc>
-     <lastmod>2017-09-21</lastmod>
+     <lastmod>2017-09-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
     
@@ -13,13 +13,19 @@
         
     <url>
      <loc>https://akastrau.github.io/korepetycje-cpp//c/</loc>
-     <lastmod>2017-09-21</lastmod>
+     <lastmod>2017-09-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         
     <url>
      <loc>https://akastrau.github.io/korepetycje-cpp//lesson01-p1/</loc>
-     <lastmod>2017-09-21</lastmod>
+     <lastmod>2017-09-26</lastmod>
+     <changefreq>daily</changefreq>
+    </url>
+        
+    <url>
+     <loc>https://akastrau.github.io/korepetycje-cpp//lesson02-p1/</loc>
+     <lastmod>2017-09-26</lastmod>
      <changefreq>daily</changefreq>
     </url>
         

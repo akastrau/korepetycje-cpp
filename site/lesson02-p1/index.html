@@ -10,7 +10,7 @@
         <meta name="description" content="Podstawy programowania w języku C/C++">
       
       
-        <link rel="canonical" href="https://akastrau.github.io/korepetycje-cpp/c/">
+        <link rel="canonical" href="https://akastrau.github.io/korepetycje-cpp/lesson02-p1/">
       
       
         <meta name="author" content="Adrian Kastrau">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Część pierwsza kursu - podstawy programowania w języku C - Korepetycje - C++</title>
+        <title>Lekcja 02: control flow, operacje wejścia - Korepetycje - C++</title>
       
     
     
@@ -86,7 +86,7 @@
                 </span>
               
             
-            Część pierwsza kursu - podstawy programowania w języku C
+            Lekcja 02: control flow, operacje wejścia
           
         </span>
       </div>
@@ -171,7 +171,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" title="Pierwsza część - język C" class="md-tabs__link md-tabs__link--active">
+        <a href="../c/" title="Pierwsza część - język C" class="md-tabs__link md-tabs__link--active">
           Pierwsza część - język C
         </a>
       
@@ -261,20 +261,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
-    
-      
-    
-    
-    <a href="./" title="Część pierwsza kursu - podstawy programowania w języku C" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../c/" title="Część pierwsza kursu - podstawy programowania w języku C" class="md-nav__link">
       Część pierwsza kursu - podstawy programowania w języku C
     </a>
-    
   </li>
 
         
@@ -294,11 +285,47 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../lesson02-p1/" title="Lekcja 02: control flow, operacje wejścia" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="toc">
+        Lekcja 02: control flow, operacje wejścia
+      </label>
+    
+    <a href="./" title="Lekcja 02: control flow, operacje wejścia" class="md-nav__link md-nav__link--active">
       Lekcja 02: control flow, operacje wejścia
     </a>
+    
+      
+<nav class="md-nav md-nav--secondary">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jest-praca-domowa" title="... jest praca domowa!" class="md-nav__link">
+    ... jest praca domowa!
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
+</nav>
+    
   </li>
 
         
@@ -324,6 +351,20 @@
     
   
   
+    <label class="md-nav__title" for="toc">Table of contents</label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#jest-praca-domowa" title="... jest praca domowa!" class="md-nav__link">
+    ... jest praca domowa!
+  </a>
+  
+</li>
+      
+      
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -335,11 +376,95 @@
               
                 
                 
-                <h1 id="czesc-pierwsza-kursu-podstawy-programowania-w-jezyku-c">Część pierwsza kursu - podstawy programowania w języku C<a class="headerlink" href="#czesc-pierwsza-kursu-podstawy-programowania-w-jezyku-c" title="Permanent link">&para;</a></h1>
-<p>W tej części skupimy się na podstawowych elementach tego języka. Poznamy w jaki sposób definiuje się funkcje. Nie zabraknie też zabawy ze wskaźnikami oraz ze strukturami danych.</p>
-<p><center><img src="../img/pointers.jpg" alt="Pointers in C/C++"></center>
-<center>Źródło: http://www.quickmeme.com/meme/3ovgn9</center></p>
-<p><strong>Ostatnia aktualizacja:</strong> Thu Sep 21 14:18:09 CEST 2017</p>
+                <h1 id="tutaj-bedzie-opis-do-drugiej-lekcji-ale">Tutaj będzie opis do drugiej lekcji, ale...<a class="headerlink" href="#tutaj-bedzie-opis-do-drugiej-lekcji-ale" title="Permanent link">&para;</a></h1>
+<h2 id="jest-praca-domowa">... jest praca domowa!<a class="headerlink" href="#jest-praca-domowa" title="Permanent link">&para;</a></h2>
+<p>W repozytorium znajdziesz solucję o nazwie <strong>homework02-task01</strong>.</p>
+<p>W solucji znajdziemy lekko zmodyfikowany kod zaprezentowany w drugim przykładzie. Wygląda on następująco:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="c1">// Implement data validation!</span>
+    <span class="c1">// Age must be an integer in range &lt;0;150&gt;</span>
+    <span class="c1">// What happens if you cause a buffer overflow (that is to say that, you enter a character string larger than 35 characters)?</span>
+    <span class="c1">// Force may be with you! Good luck!</span>
+
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">35</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+    <span class="kt">char</span> <span class="n">myName</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;Alice&quot;</span><span class="p">;</span> <span class="c1">// char myName[] = {&#39;A&#39;, &#39;l&#39;, &#39;i&#39;, &#39;c&#39;, &#39;e&#39;}; lub char* myName = &quot;Alice&quot;;</span>
+    <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hi, I&#39;m %s! What&#39;s your name?: &quot;</span><span class="p">,</span> <span class="n">myName</span><span class="p">);</span>
+    <span class="n">scanf_s</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">,</span> <span class="k">sizeof</span><span class="p">(</span><span class="n">name</span><span class="p">));</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hi %s! How old are you? &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+    <span class="n">scanf_s</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">age</span><span class="p">);</span>
+
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;This content is not available for you! Sorry, dude!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Returning -1!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&gt;</span> <span class="mi">150</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;YYyhmm??</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mh">0x029A</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Ok, You&#39;re in!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Tak jak opisałem wyżej, należy zaimplementować walidacje wprowadzanych danych. Nie można dopuścić do sytuacji takiej, że użytkownik wprowadza wiek większy od 150 lat i mniejszy od 0. Zwróć uwagę, że w takiej sytuacji fragment <code>else if...</code> jest zbędny.</p>
+<p>W przypadku podania błędnych danych, użytkownik proszony jest o ich ponowne wprowadzanie tak długo, aż wpisze je poprawnie. :)</p>
+<p>Pamiętaj także o czyszczeniu bufora wejściowego <code>stdin</code>. <strong>POWODZENIA!</strong></p>
                 
                   
                 
@@ -358,7 +483,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid">
         
-          <a href=".." title="Strona główna" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../lesson01-p1/" title="Lekcja 01: Pierwszy program" class="md-flex md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-flex__cell md-flex__cell--shrink">
               <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
             </div>
@@ -367,25 +492,11 @@
                 <span class="md-footer-nav__direction">
                   Previous
                 </span>
-                Strona główna
-              </span>
-            </div>
-          </a>
-        
-        
-          <a href="../lesson01-p1/" title="Lekcja 01: Pierwszy program" class="md-flex md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
-              <span class="md-flex__ellipsis">
-                <span class="md-footer-nav__direction">
-                  Next
-                </span>
                 Lekcja 01: Pierwszy program
               </span>
             </div>
-            <div class="md-flex__cell md-flex__cell--shrink">
-              <i class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
-            </div>
           </a>
+        
         
       </nav>
     </div>
