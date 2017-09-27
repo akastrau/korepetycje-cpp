@@ -12,7 +12,7 @@ extra_javascript:
 - 'js/extra.js'
 extra:
   feature:
-    tabs: true
+    tabs: false
 
 markdown_extensions:
   - admonition

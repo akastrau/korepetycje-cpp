@@ -148,41 +148,6 @@
     <div class="md-container">
       
       
-        
-
-  
-
-<nav class="md-tabs md-tabs--active" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
-    <ul class="md-tabs__list">
-      
-        
-  <li class="md-tabs__item">
-    
-      <a href=".." title="Strona główna" class="md-tabs__link">
-        Strona główna
-      </a>
-    
-  </li>
-
-      
-        
-  
-  
-    <li class="md-tabs__item">
-      
-        <a href="../c/" title="Pierwsza część - język C" class="md-tabs__link md-tabs__link--active">
-          Pierwsza część - język C
-        </a>
-      
-    </li>
-  
-
-      
-    </ul>
-  </div>
-</nav>
-      
       <main class="md-main">
         <div class="md-main__inner md-grid" data-md-component="container">
           
@@ -314,8 +279,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jest-praca-domowa" title="... jest praca domowa!" class="md-nav__link">
-    ... jest praca domowa!
+  <a href="#przykad-1" title="Przykład 1" class="md-nav__link">
+    Przykład 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#przykad-2" title="Przykład 2" class="md-nav__link">
+    Przykład 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#przykad-3" title="Przykład 3" class="md-nav__link">
+    Przykład 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#przykad-4" title="Przykład 4" class="md-nav__link">
+    Przykład 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#przykad-5" title="Przykład 5" class="md-nav__link">
+    Przykład 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-teraz-na-zakonczenie-praca-domowa" title="A teraz na zakończenie... praca domowa!" class="md-nav__link">
+    A teraz na zakończenie... praca domowa!
   </a>
   
 </li>
@@ -355,8 +355,43 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#jest-praca-domowa" title="... jest praca domowa!" class="md-nav__link">
-    ... jest praca domowa!
+  <a href="#przykad-1" title="Przykład 1" class="md-nav__link">
+    Przykład 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#przykad-2" title="Przykład 2" class="md-nav__link">
+    Przykład 2
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#przykad-3" title="Przykład 3" class="md-nav__link">
+    Przykład 3
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#przykad-4" title="Przykład 4" class="md-nav__link">
+    Przykład 4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#przykad-5" title="Przykład 5" class="md-nav__link">
+    Przykład 5
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#a-teraz-na-zakonczenie-praca-domowa" title="A teraz na zakończenie... praca domowa!" class="md-nav__link">
+    A teraz na zakończenie... praca domowa!
   </a>
   
 </li>
@@ -376,8 +411,371 @@
               
                 
                 
-                <h1 id="tutaj-bedzie-opis-do-drugiej-lekcji-ale">Tutaj będzie opis do drugiej lekcji, ale...<a class="headerlink" href="#tutaj-bedzie-opis-do-drugiej-lekcji-ale" title="Permanent link">&para;</a></h1>
-<h2 id="jest-praca-domowa">... jest praca domowa!<a class="headerlink" href="#jest-praca-domowa" title="Permanent link">&para;</a></h2>
+                <h1 id="lekcja-2-kilka-sow-o-petlach-i-operacjach-wejscia-i-wyjscia">Lekcja 2: kilka słów o pętlach i operacjach wejścia i wyjścia<a class="headerlink" href="#lekcja-2-kilka-sow-o-petlach-i-operacjach-wejscia-i-wyjscia" title="Permanent link">&para;</a></h1>
+<p>W poprzedniej lekcji poznaliśmy podstawowe typy danych oraz funkcje <code>printf()</code>. W tej lekcji zajmiemy się kontrolą wykonania naszego kodu.</p>
+<h2 id="przykad-1">Przykład 1<a class="headerlink" href="#przykad-1" title="Permanent link">&para;</a></h2>
+<p>Zerknijmy na poniższy kod:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">name</span><span class="p">[</span><span class="mi">35</span><span class="p">];</span>
+    <span class="kt">char</span> <span class="n">myName</span><span class="p">[]</span> <span class="o">=</span> <span class="s">&quot;Alice&quot;</span><span class="p">;</span> <span class="c1">// char myName[] = {&#39;A&#39;, &#39;l&#39;, &#39;i&#39;, &#39;c&#39;, &#39;e&#39;}; lub char* myName = &quot;Alice&quot;;</span>
+    <span class="kt">int</span> <span class="n">age</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hi, I&#39;m %s! What&#39;s your name?: &quot;</span><span class="p">,</span> <span class="n">myName</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hi %s! How old are you? &quot;</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+    <span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">age</span><span class="p">);</span>
+
+    <span class="k">if</span> <span class="p">(</span><span class="n">age</span> <span class="o">&lt;</span> <span class="mi">18</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;This content is not available for you! Sorry, dude!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Returning -1!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+        <span class="k">return</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">else</span> 
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Ok, You&#39;re in!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>W pierwszych liniach funkcji main zadeklarowaliśmy tablice (pierwsza pusta o rozmiarze maksymalnym 35 znaków i druga zawierająca napis "Alice"). Kazda tablica typu char powinna być zakończona znakiem '\0' (null-terminated string). Znak null zostanie dodany automatycznie w naszym przypadku.</p>
+<p>Dalej nie dzieje, się nic szczególnego. Zwróćmy jednak uwage na funkcje <code>scanf()</code>. Jest to funkcja podobna do funkcji <code>printf()</code>. Jej zadaniem jest wczytanie danych z klawiatury, następnie umieścić je w odpowiednim miejscu. Miejsce te definiowane jest przez <strong>wskaźnik</strong>. Wskaźnik zawiera adres w pamięci RAM danej zmiennej (wskazuje na zmienną).</p>
+<p>Tablice typu char są automatycznie wskaźnikami. Wskaźnik domyślnie wskazuje na pierwszy element w tablicy.</p>
+<p>Funkcja  <code>scanf()</code> przyjmuje format danych, który ma zostać wczytany z klawiatury (tak jak w funkcji <code>printf()</code>), a następnie podaje się zmienne w postaci wskaźnikowego, czyli adresy.</p>
+<p>W postaci zmiennych niewskaźnikowych robimy to za pomocą operatora <code>&amp;</code> (przykład: <code>&amp;x</code> -&gt; dostaniemy adres zmiennej x w pamięci).</p>
+<p>W przypadku zmiennych, które są wskaźnikami, przekazujemy wartość tak jak zwykle.</p>
+<p>Potem widzimy blok <code>if (warunek) {...} else {...}</code>. Kod pod warunkiem <strong>if</strong> zostanie wykonany, jeśli wartość logiczna warunku da wartość true (inaczej 1). W naszym wypadku jest to wiek mniejszy od 18 lat.</p>
+<p>Kod w bloku else zostanie wykonany w innym przypadku.</p>
+<p>Niestety funkcja scanf() jest niebezpieczna. Jednym z zamienników jest funkcja <code>scanf_s()</code> dostępna jedynie w systemach Windows. O innych zamiennikach opowiem w innej lekcji. W VS Studio możemy wyłączyć sprawdzanie bezpieczeństwa kodu poprzez wyłączenie <strong>SDL checks</strong> w ustawieniach projektu.</p>
+<h2 id="przykad-2">Przykład 2<a class="headerlink" href="#przykad-2" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;string.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">answer</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="p">{</span> <span class="mi">0</span> <span class="p">};</span>
+    <span class="k">while</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Do you know Elizabeth Turner? [yes, no, idk]: &quot;</span><span class="p">);</span>
+        <span class="n">scanf_s</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="s">&quot;yes&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Great!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="s">&quot;no&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Elizabeth is an actress!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">answer</span><span class="p">,</span> <span class="s">&quot;idk&quot;</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Really!? I&#39;m not sure if you are just stupid or you&#39;re trolling!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+            <span class="k">break</span><span class="p">;</span>
+        <span class="p">}</span>
+        <span class="k">else</span> <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Do you know Elizabeth Turner? [yes, no, idk]: &quot;</span><span class="p">);</span>
+            <span class="n">scanf_s</span><span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">answer</span><span class="p">,</span> <span class="mi">4</span><span class="p">);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>W tym przykładzie użyliśmy biblioteki <code>&lt;string.h&gt;</code> do porównywania zmiennych łańcuchowych. Funkcja <code>strcmpy()</code> porównuje dwa wskaźniki typu char i zwraca różnicę w znakach. Jeśli oba stringi są identyczne to funkcja <code>strcmp()</code> zwróci <code>0</code>.</p>
+<div class="admonition tip">
+<p class="admonition-title">Ciekawostka</p>
+<p>Istnieje funkcja <code>strcmpi()</code>, która nie zwraca uwagę na wielkość liter przy porównywaniu.</p>
+<p>Inną ciekawą funkcją jest <code>strlen()</code>, która zwraca aktualną długość tablicy znaków.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Uwaga!</p>
+<p>Funkcja <code>scanf_s()</code> wymaga podania jeszcze jednego argumentu, w przypadku tekstu. Jest to maksymalna ilość znaków jakie mogą byc zapisane w zmiennej typu char*.</p>
+</div>
+<h2 id="przykad-3">Przykład 3<a class="headerlink" href="#przykad-3" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdbool.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">bool</span> <span class="n">doIt</span> <span class="o">=</span> <span class="nb">false</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">counter</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+
+    <span class="k">do</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Do it? &quot;</span><span class="p">);</span>
+        <span class="n">doIt</span> <span class="o">==</span> <span class="nb">true</span> <span class="o">?</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Yes!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span> <span class="o">:</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;No!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">counter</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">doIt</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Counter: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">counter</span><span class="p">);</span>
+
+    <span class="k">while</span> <span class="p">(</span><span class="n">doIt</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="c1">// doIt == true</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Incrementing counter in while loop!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">counter</span><span class="o">++</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Counter: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">counter</span><span class="p">);</span>
+    <span class="n">doIt</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Do it? &quot;</span><span class="p">);</span>
+    <span class="n">doIt</span> <span class="o">==</span> <span class="nb">true</span> <span class="o">?</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Yes!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">)</span> <span class="o">:</span> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;No!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">while</span> <span class="p">(</span><span class="n">doIt</span> <span class="o">==</span> <span class="nb">true</span> <span class="o">&amp;&amp;</span> <span class="n">counter</span> <span class="o">&lt;</span> <span class="mi">3</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Incrementing counter in while loop (another loop)!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// counter++; lub counter = counter + 1;</span>
+    <span class="p">}</span>
+
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>W tym przykładzie użyliśmy biblioteki <code>&lt;stdbool.h&gt;</code>, żeby móc zdefiniowac typ zmiennej typu bool (typu logicznego). Typ logiczny może przyjmować dwie wartości: <strong>true</strong> albo <strong>false</strong> (1 albo 0).</p>
+<p>Do kontrolowania przepływu działania użyliśmy <code>do {...} while(warunek)</code> (wykonaj najperw operacje pod <code>do</code>, potem sprawdź, czy warunek jest prawdziwy. Jeśli tak, to powtórz operacje). W konstrukcji <code>while(warunek)</code> warunek najpierw jest sprawdzany. Jeśli jest on prawdziwy, to kod zostanie wykonany.</p>
+<p>Kod <code>counter++</code> inkrementuje (zwiększa wartość) zmienną <code>counter</code> o 1. Z kolei <code>doIt == true : operacja ? druga_operacja</code> to tzw. skrócony if.</p>
+<p>Konstrukcja skróconego if'a wygląda tak:</p>
+<p><code>warunek : (jesli prawdziwy wykonaj operacje) ? (wykonaj, jeśli fałsz)</code></p>
+<p>Jest to równoważne z:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">if</span> <span class="p">(</span><span class="n">warunek</span><span class="p">){</span>
+    <span class="c1">// wykonaj operacje, jeśli prawdziwy</span>
+<span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+    <span class="c1">// wykonaj, jeśli fałsz</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p><code>&amp;&amp;</code> oznacza i logiczne (koniunkcja), <code>||</code> - lub logiczne (alternatywa), a <code>!</code> - zaprzeczenie (negacje).</p>
+<p><center><img src="../img/if-morning.jpg" alt="Programmer's morning meme"></center>
+<center>Źródło: https://pl.pinterest.com/pin/382735668317221447/</center></p>
+<h2 id="przykad-4">Przykład 4<a class="headerlink" href="#przykad-4" title="Permanent link">&para;</a></h2>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">i</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Sum: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
+    <span class="n">sum</span> <span class="o">=</span> <span class="n">n</span> <span class="o">*</span> <span class="p">(</span><span class="n">n</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Sum: %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">sum</span><span class="p">);</span>
+
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>W tym przykładzie zaprezentowałem użycie pętli <code>for</code>. Pętla ta oblicza sumę od 1 do n.</p>
+<p>Konstrukcja pętli wygląda następująco:</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre>1
+2
+3</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">zmienna</span> <span class="o">=</span> <span class="n">wartosc_od_ktorej_zaczynamy</span><span class="p">,</span> <span class="n">warunek</span><span class="p">,</span> <span class="n">krok</span><span class="p">){</span>
+    <span class="c1">// kod</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Kod zostanie wykonywany tak długo, jak zmienna <code>i</code> nie osiągnie wartość <code>n</code>. Zmienna <code>i</code> zwiększana jest o 1 (to jest nasz krok).</p>
+<p>Zachęcam do sprawdzenia działania tego kodu (i nie tylko tego!).</p>
+<h2 id="przykad-5">Przykład 5<a class="headerlink" href="#przykad-5" title="Permanent link">&para;</a></h2>
+<p>W tym przykładzie użyliśmy konstrukcji <code>switch(zmienna_liczbowa){case warunek}</code>. Posłużyła ona nam do zbudowania prostego menu.</p>
+<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
+ 2
+ 3
+ 4
+ 5
+ 6
+ 7
+ 8
+ 9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30</pre></div></td><td class="code"><div class="codehilite"><pre><span></span><span class="cp">#include</span> <span class="cpf">&lt;stdio.h&gt;</span><span class="cp"></span>
+<span class="cp">#include</span> <span class="cpf">&lt;stdlib.h&gt;</span><span class="cp"></span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">mode</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;</span><span class="se">\t</span><span class="s">Nuclear Weapon control panel! Welcome!</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Select mode:</span><span class="se">\n</span><span class="s"> 1 - destroy USA</span><span class="se">\n</span><span class="s"> 2 - Clean weapon</span><span class="se">\n</span><span class="s"> 3 - Prepare nuclear energy</span><span class="se">\n\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Selection&gt; &quot;</span><span class="p">);</span>
+    <span class="n">scanf_s</span><span class="p">(</span><span class="s">&quot;%i&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">mode</span><span class="p">);</span>
+
+
+    <span class="k">switch</span> <span class="p">(</span><span class="n">mode</span><span class="p">)</span>
+    <span class="p">{</span>
+    <span class="k">case</span> <span class="mi">1</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Launching nuclear missiles!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">case</span> <span class="mi">2</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Cleaning...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+    <span class="k">case</span> <span class="mi">3</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Preparing...</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="k">default</span><span class="o">:</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">&quot;Bad mode!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+        <span class="k">break</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="n">system</span><span class="p">(</span><span class="s">&quot;pause&quot;</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</td></tr></table>
+
+<p>Niestety konstrukcja <code>switch()...case</code> wymaga użycia zmiennej liczbowej (lub znaku, bo znak to też liczba). Specjalnie przy drugim case nie użyłem słówka kluczowego <code>break</code>. Sprawdź koniecznie działanie programu z <code>break</code> i bez!</p>
+<h2 id="a-teraz-na-zakonczenie-praca-domowa">A teraz na zakończenie... praca domowa!<a class="headerlink" href="#a-teraz-na-zakonczenie-praca-domowa" title="Permanent link">&para;</a></h2>
+<p><center><img src="../img/keep-calm-and-code.jpg" alt="Keep calm and code" width="60%" height="60%"></center>
+<center>Źródło: https://www.redbubble.com/people/fayafshar/works/8585516-keep-calm-and-code?p=t-shirt</center></p>
 <p>W repozytorium znajdziesz solucję o nazwie <strong>homework02-task01</strong>.</p>
 <p>W solucji znajdziemy lekko zmodyfikowany kod zaprezentowany w drugim przykładzie. Wygląda on następująco:</p>
 <table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
