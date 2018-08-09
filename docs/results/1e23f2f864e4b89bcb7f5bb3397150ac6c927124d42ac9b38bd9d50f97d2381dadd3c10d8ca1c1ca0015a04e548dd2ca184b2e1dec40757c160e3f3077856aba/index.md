@@ -8,3 +8,5 @@ Brak wyników!
 2| 0  | 11
 
 Twój wynik to: <strong>0/15</strong> -->
+
+[Powrót do strony głównej](/)

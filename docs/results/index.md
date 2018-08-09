@@ -34,7 +34,7 @@ function loadPage(login, password) {
 			error : function(xhr, ajaxOptions, thrownError) {
 				parent.location.hash = hash;
 
-				$("#password").attr("placeholder","Niepoprawne hasło!");
+				$("#password").attr("placeholder","To na pewno dobre dane logowania?");
                 $("#password").val("");
                 $("#login").val("");
 			}
