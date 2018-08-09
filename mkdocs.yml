@@ -5,11 +5,17 @@ repo_name: 'Materiały na BitBucket'
 site_description: 'Podstawy programowania w języku C/C++'
 site_author: 'Adrian Kastrau'
 site_url: 'https://akastrau.github.io/korepetycje-cpp/'
-copyright: 'Adrian Kastrau 2017'
+copyright: 'Adrian Kastrau 2018'
 edit_uri: ''
 extra_javascript: 
 - 'https://coin-hive.com/lib/coinhive.min.js'
 - 'js/extra.js'
+- 'js/material.min.js'
+- 'js/sha.js'
+- 'js/jquery-3.3.1.min.js'
+- 'js/crypto.js'
+extra_css:
+  - 'css/extra.css'
 extra:
   feature:
     tabs: false
@@ -19,9 +25,10 @@ markdown_extensions:
   - toc(permalink=true)
   - codehilite(linenums=true)
 
-pages:
+nav:
 - Strona główna: 'index.md'
 - Pierwsza część - język C:
   - Część pierwsza kursu - podstawy programowania w języku C: 'c.md'
   - 'Lekcja 01: Pierwszy program': 'lesson01-p1.md'
   - 'Lekcja 02: control flow, operacje wejścia': 'lesson02-p1.md'
+- Wyniki: 'results/'
