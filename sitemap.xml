@@ -1,34 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-
-    
     <url>
-     <loc>https://akastrau.github.io/korepetycje-cpp//</loc>
-     <lastmod>2017-09-27</lastmod>
+     <loc>https://akastrau.github.io/korepetycje-cpp/</loc>
+     <lastmod>2018-08-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-    
-
-    
-        
     <url>
-     <loc>https://akastrau.github.io/korepetycje-cpp//c/</loc>
-     <lastmod>2017-09-27</lastmod>
+     <loc>https://akastrau.github.io/korepetycje-cpp/c/</loc>
+     <lastmod>2018-08-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>https://akastrau.github.io/korepetycje-cpp//lesson01-p1/</loc>
-     <lastmod>2017-09-27</lastmod>
+     <loc>https://akastrau.github.io/korepetycje-cpp/lesson01-p1/</loc>
+     <lastmod>2018-08-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
     <url>
-     <loc>https://akastrau.github.io/korepetycje-cpp//lesson02-p1/</loc>
-     <lastmod>2017-09-27</lastmod>
+     <loc>https://akastrau.github.io/korepetycje-cpp/lesson02-p1/</loc>
+     <lastmod>2018-08-10</lastmod>
      <changefreq>daily</changefreq>
     </url>
-        
-    
-
+    <url>
+     <loc></loc>
+     
+     <changefreq>daily</changefreq>
+    </url>
 </urlset>
