@@ -1,5 +1,6 @@
 site_name: Korepetycje - C++
 theme: 'material'
+favicon: 'img/favicon.png'
 repo_url: 'https://bitbucket.org/akastrau/korepetycje-c'
 repo_name: 'Materiały na BitBucket'
 site_description: 'Podstawy programowania w języku C/C++'
@@ -19,6 +20,8 @@ extra_css:
 extra:
   feature:
     tabs: false
+plugins: []
+
 
 markdown_extensions:
   - admonition
