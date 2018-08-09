@@ -9,4 +9,4 @@ Brak wyników!
 
 Twój wynik to: <strong>0/15</strong> -->
 
-[Powrót do strony głównej](/)
+[Powrót do strony głównej](/korepetycje-cpp/)
